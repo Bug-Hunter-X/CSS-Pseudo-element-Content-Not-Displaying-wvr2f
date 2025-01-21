@@ -1,0 +1,8 @@
+The following CSS code snippet attempts to style a list item using a pseudo-element and the `::before` pseudo-class. However, the content property is not working as expected: 
+```css
+li::before {
+  content: "\2022"; /* Unicode for bullet */
+  color: blue;
+}
+```
+This might seem simple, but the bug arises when the list item already has content, or the element it is applied to doesn't support `::before` pseudo-element. The bullet might not appear or might be hidden.
